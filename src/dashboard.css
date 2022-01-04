@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    /* --primary-color: #0083CC;
+    --secondary-color: #1DCC00; */
+    --list-color: #6E6E6E;
+    --text-color: #fff;
+    --shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-lists{
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+    height: 100%;
+    justify-content:calc(20px)
+}
+
+.list {
+    margin: 0.5rem;
+    width: 300px;
+    background-color: var(--list-color);
+    color: var(--text-color);
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    height: max-content;
+}
+
+.title {
+    background-color: var(--list-color);
+    margin: 0.5rem;
+    border-bottom: 1px solid #949494;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title-nonEditable {
+    font-weight: 500;
+}
+
+.ellipsis {
+    transform: scale(1.2);
+    margin-right: 10px;
+    height: 100%;
+}
+
+input[type=text] {
+    width: 80%;
+    background-color: #4e4e4e ;
+    color: var(--text-color);
+    outline: none;
+    border: none;
+    height: 100%;
+    font-weight: 500;
+}
+
+.list-card {
+    display: block;
+    padding: 2px 13px ;
+    background-color: #534d4d;
+    margin: 0.5rem;
+    border-radius: 10px;
+}
+
+.inputContainer {
+    display: block;
+    text-align: center;
+    background-color: var(--list-color);
+    color: var(--secondary-color);
+    margin: 0.5rem;
+    position: relative;
+    right: 3px;
+    border-radius: 10px;
+    width: 290px;
+    height: max-content;
+}
+
+.inputContainer:hover {
+    background-color: #534d4d;
+}
+
+.inputCard {
+    display: block;
+    width: 300px;
+    margin-left: 5px;
+}
+
+.input-card-area {
+    background-color: #534d4d;
+    color: var(--text-color);
+    outline: 0;
+    width: 95%;
+    height: 60px;
+    border-radius: 10px;
+    margin-top: 5px;
+    padding: 3px 5px;
+    resize: none;
+}
+
+.add-card-btn-container {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

@@ -1,0 +1,16 @@
+[
+    {
+        "id": "list-1",
+        "title": "Todo",
+        "cards": [
+            {
+                "id": "card-1",
+                "content": "Learn React"
+            },
+            {
+                "id": "card-2",
+                "content": "Learn to use Hooks"
+            }
+        ]
+    }
+]
