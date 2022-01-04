@@ -63,7 +63,7 @@ export default function LoginSignUp() {
                         </Link>
                         <div>
                         <Link to='/loginsignup'>
-                            <button className='logout-btn'>
+                            <button>
                                 Login/Sign-up
                             </button>
                             </Link>
