@@ -58,6 +58,8 @@ nav .navbar {
     padding: 0 1em;
 }
 
+
+
 .logo span{
     color: var(--text-color);
     font-size: 1.8rem;
@@ -68,10 +70,12 @@ nav .navbar {
 
 .logo span:nth-child(odd){
     color: var(--primary-color);
+    text-decoration-line: underline;
 }
 
 .logo span:nth-child(even){
     color: var(--secondary-color);
+    text-decoration-line: underline;
 }
 
 nav .navbar .links {

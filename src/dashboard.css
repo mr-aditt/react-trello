@@ -43,7 +43,7 @@
 }
 
 .list:hover {
-    outline: 1px solid var(--secondary-color);
+    outline: 1px solid #189e00;
     outline-offset: 5px;
 }
 

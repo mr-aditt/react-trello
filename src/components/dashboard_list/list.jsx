@@ -8,21 +8,21 @@ export default function List({ item }) {
 
     return (
         <div className='list'>
-            
-                <Title key={item.id} title={item.title} itemId={item.id}/>
-                <Droppable droppableId={item.id}>
-                    {(provided)=>(
-                        <div ref={provided.innerRef} {...provided.droppableProps}>
-                        {item.cards.map((card, index) =>( 
-                            <Card key={card.id} card={card} index={index}/>
+
+            <Title key={item.id} title={item.title} itemId={item.id} />
+            <Droppable droppableId={item.id}>
+                {(provided) => (
+                    <div ref={provided.innerRef} {...provided.droppableProps}>
+                        {item.cards.map((card, index) => (
+                            <Card key={card.id} card={card} index={index} />
                         ))}
                         {provided.placeholder}
-                        </div>
+                    </div>
 
-                    )}
-                
-                </Droppable>
-                <InputContainer listId={item.id} type="card"/>
+                )}
+
+            </Droppable>
+            <InputContainer listId={item.id} type="card" />
         </div>
     )
 }

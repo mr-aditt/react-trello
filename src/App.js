@@ -3,7 +3,7 @@ import Home from './components/Home'
 import LoginSignUp from './components/LoginSignUp'
 import AuthProvider from './contexts/AuthContext'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Dashboard from './components/Dashboard'
+import Dashboard from './components/Dashboard';
 
 function App() {
   return (

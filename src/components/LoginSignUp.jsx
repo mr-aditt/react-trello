@@ -54,11 +54,11 @@ export default function LoginSignUp() {
     return (
         <>
                 <nav>
-                    <div className="navbar">
-                    <Link to='/'>
+                <div className='navbar'>
+                        <Link to='/'>
                         <div className='logo'>
-                            <a href="#">Oll</a>
-                            <a href="#">Ert</a>
+                            <span>Oll</span>
+                            <span>Ert</span>
                         </div>
                         </Link>
                         <div>
@@ -75,8 +75,8 @@ export default function LoginSignUp() {
                         <div className="card-title">
                         <span>Welcome to </span> 
                         <span className='logo'>
-                            <a href="#">Oll</a>
-                            <a href="#">Ert</a>
+                            <span>Oll</span>
+                            <span>Ert</span>
                         </span>
                         </div>
                         {errorLogin && <div className='alert-danger'>{errorLogin}</div>}
@@ -99,8 +99,8 @@ export default function LoginSignUp() {
                         <div className="card-title"> 
                         <span>Join</span>
                         <span className='logo'>
-                            <a href="#">Oll</a>
-                            <a href="#">Ert</a>
+                            <span>Oll</span>
+                            <span>Ert</span>
                         </span>
                         </div>
                         {errorSignup && <div className='alert-danger'>{errorSignup}</div>}

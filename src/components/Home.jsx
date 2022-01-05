@@ -14,15 +14,13 @@ export default function Home() {
             <header>
                 <nav >
                     <div className='navbar'>
-                        <Link to='/'>
                         <div className='logo'>
-                            <a href="#">Oll</a>
-                            <a href="#">Ert</a>
+                            <span>Oll</span>
+                            <span>Ert</span>
                         </div>
-                        </Link>
                         <div className='links'>
-                            <a href="#">Home</a>
-                            <a href="#">About us</a>
+                            <span className='homepage-nav-links'>Home</span>
+                            <span className='homepage-nav-links'>About us</span>
                         </div>
                         <div>
                             <Link to="/loginsignup">
@@ -35,7 +33,7 @@ export default function Home() {
                 </nav>
             </header>
 
-            <body>
+            
                 <div className='body-container'>
                     <div className='hero-content'>
                         <div className='emphasis'>
@@ -59,20 +57,19 @@ export default function Home() {
                         <img src={hero_area} alt="" />
                     </div>
                 </div>
-            </body>
 
             <footer>
                 <div className='footer-container'>
                     <div className='avatars'>
                         <div className="person jack">
                             <img src={jack} alt="JACK" />
-                            <caption>Jack Doe</caption>
+                            <div className='caption'>Jack Doe</div>
                             <span>Co-founder</span>
                             <span>Chief of Operations, Head Engineer</span>
                         </div>
                         <div className="person jane">
                             <img src={jane} alt="JANE" />
-                            <caption>Jane Katherine Doe</caption>
+                            <div className='caption'>Jane Katherine Doe</div>
                             <span>Co-founder</span>
                             <span>Chief of Marketing, Head Analyst</span>
                         </div>

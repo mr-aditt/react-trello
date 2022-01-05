@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import List from './dashboard_list/list';
 import '../dashboard.css';
 import data from '../resources/data.json';
@@ -10,12 +10,12 @@ import { useAuth } from '../contexts/AuthContext'
 import { useNavigate } from 'react-router-dom';
 
 
+
 export default function Dashboard() {
 
     const [listData, setListData] = useState(data);
-    const { currentUser, logout } = useAuth();
+    const { logout } = useAuth();
     const navigate = useNavigate();
-    console.log(currentUser);
 
     async function handleLogout() {
         try {
@@ -35,7 +35,6 @@ export default function Dashboard() {
         };
 
         listData.map((item, idx) => {
-            console.log("ITEM-ID: ", item.id);
             if (item.id === listId) {
                 console.log(item.id === listId);
                 const list = listData[idx];
@@ -49,6 +48,7 @@ export default function Dashboard() {
                 ];
                 setListData(updated_lists);
             }
+            return []
         })
     }
 
@@ -90,30 +90,22 @@ export default function Dashboard() {
         if (source.droppableId === destination.droppableId) {
             sourceList.cards.splice(source.index, 1);
             destinationList.cards.splice(destination.index, 0, draggingCard);
-
-
-
-            // const updated_lists = [
-            //     ...listData,
-            //     destinationList
-            // ];
-
-            // console.log(updated_lists);
-            // setListData(updated_lists)
         }
 
     }
 
-    console.log(listData);
+
 
     return (
         <listContext.Provider value={{ addMoreCard, addMoreList }}>
             <nav>
-                <div className="navbar">
-                    <div className='logo'>
-                        <a href="#">Oll</a>
-                        <a href="#">Ert</a>
-                    </div>
+                <div className='navbar'>
+                    
+                        <div className='logo'>
+                            <span>Oll</span>
+                            <span>Ert</span>
+                        </div>
+                    
                     <div className='dashboard-head'>
                         Dashboard
                     </div>
@@ -124,7 +116,7 @@ export default function Dashboard() {
                     </div>
                 </div>
             </nav>
-            {/* <div className='userEmail'>{currentUser}</div> */}
+            
             <DragDropContext onDragEnd={onDragEnd}>
                 <div className='dashboard-lists'>
                     {listData.length > 0 && listData.map(item => {
