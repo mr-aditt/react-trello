@@ -1,22 +1,23 @@
 import React from 'react';
 import { useContext, useState } from 'react';
-import { listContext } from '../context';
+import { listContext } from '../Dashboard';
 
-export default function InputCard({setOpen, listId, type}) {
 
-    const {addMoreCard, addMoreList} = useContext(listContext);
-    const [title, setTitle, ] = useState('');
+export default function InputCard({ setOpen, listId, type }) {
 
-    function handleChange(e){
+    const { addMoreCard, addMoreList } = useContext(listContext);
+    const [title, setTitle,] = useState('');
+
+    function handleChange(e) {
         setTitle(e.target.value);
     }
 
-    function handleBtnConfirm(){
-        if(type==="card"){
+    function handleBtnConfirm() {
+        if (type === "card") {
             console.log(listId, title);
             addMoreCard(listId, title)
             setOpen(false)
-        }else{
+        } else {
             addMoreList(title)
             setOpen(false)
         }
@@ -26,8 +27,8 @@ export default function InputCard({setOpen, listId, type}) {
         <div className='inputCard'>
             <textarea name="input-card-area" className='input-card-area' onChange={handleChange} />
             <div className='add-card-btn-container'>
-                <button onClick={handleBtnConfirm}>{type==="card"?"Add card":"Add list"}</button>
-                <button className='close-card' onClick={()=>setOpen(false)}>x</button>
+                <button onClick={handleBtnConfirm}>{type === "card" ? "Add card" : "Add list"}</button>
+                <button className='close-card' onClick={() => setOpen(false)}>x</button>
             </div>
         </div>
     )
