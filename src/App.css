@@ -58,7 +58,7 @@ nav .navbar {
     padding: 0 1em;
 }
 
-.logo a{
+.logo span{
     color: var(--text-color);
     font-size: 1.8rem;
     font-weight: 700;
@@ -66,11 +66,11 @@ nav .navbar {
     text-shadow: var(--txt-shadow);
 }
 
-.logo a:nth-child(odd){
+.logo span:nth-child(odd){
     color: var(--primary-color);
 }
 
-.logo a:nth-child(even){
+.logo span:nth-child(even){
     color: var(--secondary-color);
 }
 
@@ -82,7 +82,7 @@ nav .navbar .links {
     font-weight: 400;
 }
 
-nav .navbar .links a {
+nav .navbar .links .homepage-nav-links {
     text-decoration: none;
     color: var(--default-color);
     padding: 0 1em;
@@ -220,13 +220,14 @@ footer .footer-container .avatars .person img {
     margin: -30px auto;
 }
 
-footer .footer-container .avatars .person caption {
+footer .footer-container .avatars .person .caption {
     display: block;
     color: var(--secondary-color);
     font-size: 13px;
     font-weight: 600;
     margin-top: 50px;
     letter-spacing: 1px;
+    text-align: center;
 }
 
 footer .footer-container .avatars .person span:nth-child(odd) {
@@ -310,10 +311,12 @@ form {
 }
 
 .alert-danger {
+    position: relative;
     width: 100%;
     text-align: center;
     color: #733341;
     background-color: #F9D7DB;
+    z-index: 10;
 }
 
 form div {
